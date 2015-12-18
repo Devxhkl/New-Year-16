@@ -1,64 +1,108 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="GK6-bL-x87">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="zhd-IJ-ho9">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--Custom Location-->
-        <scene sceneID="xPx-Eg-y97">
+        <scene sceneID="jFx-nJ-SZH">
             <objects>
-                <viewController id="L9U-mK-LaO" sceneMemberID="viewController">
+                <viewController id="UGO-D3-waU" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="H6v-Wd-0zk"/>
-                        <viewControllerLayoutGuide type="bottom" id="Rnu-BE-Pso"/>
+                        <viewControllerLayoutGuide type="top" id="e6Y-xd-VWw"/>
+                        <viewControllerLayoutGuide type="bottom" id="1D4-ss-G8R"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="9Z9-rD-Ate">
+                    <view key="view" contentMode="scaleToFill" id="KPm-h7-b6X">
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Custom Location" id="ERb-Jb-xpX"/>
+                    <tabBarItem key="tabBarItem" title="Custom Location" id="K61-e6-FAo"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="T2E-2v-9KU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6iz-vU-ezm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="989" y="1235"/>
+            <point key="canvasLocation" x="61" y="1304"/>
         </scene>
         <!--Timeline-->
-        <scene sceneID="Lmx-iO-XZr">
+        <scene sceneID="P6H-7Y-2qd">
             <objects>
-                <viewController id="XGa-y0-4dJ" sceneMemberID="viewController">
+                <viewController id="9vq-VB-dMF" customClass="TimelineViewController" customModule="NYE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="odI-hz-WSL"/>
-                        <viewControllerLayoutGuide type="bottom" id="yKA-L5-HGf"/>
+                        <viewControllerLayoutGuide type="top" id="McX-PZ-OwY"/>
+                        <viewControllerLayoutGuide type="bottom" id="WiS-RV-fE6"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="iQu-l4-awg">
+                    <view key="view" contentMode="scaleToFill" id="zdk-HK-4ZC">
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2Th-bC-spW">
+                                <rect key="frame" x="0.0" y="680" width="1920" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="q7J-EE-Oba"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7xX-ig-OHc">
+                                    <size key="itemSize" width="500" height="300"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CityCell" id="5Lb-Mx-l6r" customClass="CityCell" customModule="NYE" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="500" height="300"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="500" height="300"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="6:06:06" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="muv-4v-Jsz">
+                                                    <rect key="frame" x="116" y="81" width="268" height="137"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <outlet property="coutdownLabel" destination="muv-4v-Jsz" id="WOW-pl-wg6"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="9vq-VB-dMF" id="mDH-yu-GnQ"/>
+                                    <outlet property="delegate" destination="9vq-VB-dMF" id="6OZ-Fm-5z3"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="WiS-RV-fE6" firstAttribute="top" secondItem="2Th-bC-spW" secondAttribute="bottom" id="2Sf-BB-iBn"/>
+                            <constraint firstAttribute="trailing" secondItem="2Th-bC-spW" secondAttribute="trailing" id="mf4-5J-QDu"/>
+                            <constraint firstItem="2Th-bC-spW" firstAttribute="leading" secondItem="zdk-HK-4ZC" secondAttribute="leading" id="uxb-Iv-S8N"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Timeline" id="jhh-e5-8Rn"/>
+                    <tabBarItem key="tabBarItem" title="Timeline" id="FHi-ym-HZv"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IS2-KE-kFO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6ed-8f-Kea" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="989" y="94"/>
+            <point key="canvasLocation" x="56" y="168"/>
         </scene>
         <!--Tab Bar Controller-->
-        <scene sceneID="byD-x2-29u">
+        <scene sceneID="M3X-xq-ln0">
             <objects>
-                <tabBarController id="GK6-bL-x87" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="3MH-lp-zwv">
+                <tabBarController id="zhd-IJ-ho9" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="DTH-pM-inY">
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="0.0"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="XGa-y0-4dJ" kind="relationship" relationship="viewControllers" id="bJn-J8-Sbx"/>
-                        <segue destination="L9U-mK-LaO" kind="relationship" relationship="viewControllers" id="PL1-t5-u1C"/>
+                        <segue destination="9vq-VB-dMF" kind="relationship" relationship="viewControllers" id="OBi-Lf-Omz"/>
+                        <segue destination="UGO-D3-waU" kind="relationship" relationship="viewControllers" id="6di-qW-i5K"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ave-dT-gf8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IOg-Zh-wSK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1151" y="665"/>
+            <point key="canvasLocation" x="-2083" y="736"/>
         </scene>
     </scenes>
 </document>
